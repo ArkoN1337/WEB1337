@@ -1,0 +1,202 @@
+html{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    margin: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color:
+    rgba(242, 242, 242, 1);
+    background-image: none;
+    position: relative;
+    left: 0px;
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+.iconsearch{
+    position: absolute;
+    color:
+    rgb(255,255,255);
+    left: 89%;
+    top: 40%;
+}
+#titre
+{
+    position: relative;
+    height: 35px;
+    color: rgb(255,255,255);
+    top: 0px;
+    width: 156px;
+    margin: 0px;
+    padding: 0px;
+}
+.rectangle
+{
+    position: absolute;
+    height: 55px;
+    width: 89%;
+    background-color:rgba(33, 150, 243, 1);
+    text-align: left;
+    top: 0px;
+}
+#tableau1{
+    position: relative;
+    left: 5%;
+    top: 100px;
+    width: 327px;
+    height: 610px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color:
+    rgb(255,255,255);
+}
+.bouton{
+    float: left;
+    position: relative;
+    top:10px;
+}
+.election{
+    float: right;
+    width: 6cm;
+}
+.nomElection{
+    color: rgb(0,0,0);
+    height: 0.5cm;
+    width:8cm;
+    margin:0px;
+    margin-top:16px;
+}
+.dateElection{
+    color:grey;
+    position: relative;
+    margin: 0px;
+}
+.ligne{
+    height: 3cm;
+    width: 7.5cm;
+}
+#tableau2{
+    position: relative;
+    left: 35%;
+    width: 310px;
+    height: 618px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color:
+    rgb(255,255,255);
+    bottom: 540px;
+}
+.PartieFederaux{
+    color: rgb(0,0,0);
+    height: 0.5cm;
+    width:8cm;
+    margin:0px;
+    margin-top: 16px;
+}
+.nomPartie{
+    color:grey;
+    position: relative;
+    margin: 0px;
+}
+.ligne2{
+    height: 2cm;
+    width: 7.5cm;
+}
+.icon2{
+    color:
+    rgb(255,255,255);
+    height: 0.5cm;
+    width: 0.2cm;
+    align-content: center;
+    position: absolute;
+    top: 23px;
+    left: 95%;
+}
+.tableau3{
+    position: relative;
+    left: 65%;
+    width: 281px;
+    height: 257px;
+    margin-top: 23px;
+    padding: 9px;
+    background-color:
+    rgb(255,255,255);
+    bottom: 1200px;
+}
+.selec{
+    margin-left: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    top: 20px;
+}
+#button1 {
+    background-color: lightgray;
+    color: gray;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: none;
+  }
+  #button2{
+    background-color: lightgray;
+    color: gray;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: none;
+  }
+  #check1{
+      color:rgb(255,255,255);
+  }
+  #check2{
+      color:rgb(255,255,255);
+  }
+  #check3{
+      color: rgb(255,255,255);
+  }
+  #check4{
+      color: rgb(255,255,255);
+  }
+  #check5{
+      color: rgb(255,255,255);
+  }
+  #check6{
+    color: rgb(255,255,255);
+}
+  #cercle1{
+      color:rgb(255,255,255);
+  }
+  #cercle2{
+      color:rgb(255,255,255);
+  }
+  #cercle3{
+      color:rgb(255,255,255);
+  }
+  #cercle4{
+      color:rgb(255,255,255);
+  }
+  #iconback{
+        color: 
+        black;
+        position: absolute;
+        top: 74px;
+        left: 3%;
+        width: 23px;
+        height: 23px;
+  }
