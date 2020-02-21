@@ -5,14 +5,30 @@ var nomPartie=["nomPartie0","nomPartie1","nomPartie2","nomPartie3","nomPartie4",
 var action=[false,false];
 var clicked=[false,false,false,false,false,false];
 var firstClick=false;
+var mydata;
 
 var content="{\n    \"Elections\":\n        [\n            {\"name\" : \"43e élection fédérale\", \"date\" : \"21 octobre 2019\", \"type\": \"Federal\"},\n            {\"name\" : \"Élections générales provinciales\", \"date\" : \"1er octobre 2018\", \"type\": \"Provincial\"},\n            {\"name\" : \"42e élection fédérale\", \"date\" : \"19 octobre 2015\", \"type\": \"Federal\"},\n            {\"name\" : \"Élections générales provinciales\", \"date\" : \"7 avril 2014\", \"type\": \"Provincial\"}\n        ],\n    \"PartisFederaux\":\n        [\n            {\"abreviation\": \"P.L.C\", \"fullname\": \"Parti libéral du Canada\"},\n            {\"abreviation\": \"P.C.C.\", \"fullname\": \"Parti conservateur du Canada\"},\n            {\"abreviation\": \"B.Q.\", \"fullname\": \"Bloc Québécois\"},\n            {\"abreviation\": \"N.P.D.\", \"fullname\": \"Nouveau parti démocratique\"},\n            {\"abreviation\": \"P.V.C.\", \"fullname\": \"Parti vert du Canada\"},\n            {\"abreviation\": \"P.P.C.\", \"fullname\": \"Parti populaire du Canada\"}         \n        ],\n    \"PartisProvinciaux\":\n        [\n            {\n                \"abreviation\": \"C.A.Q\",\n                \"fullname\": \"Coalition avenir Quebec\"\n            },\n            {\n                \"abreviation\": \"P.L.Q\",\n                \"fullname\": \"Parti liberal du Quebec\"\n            },\n            {\n                \"abreviation\": \"P.Q\",\n                \"fullname\": \"Parti quebecois\"\n            },\n            {\n                \"abreviation\": \"P.V.Q\",\n                \"fullname\": \"Parti vert du Quebec\"\n            },\n            {\n                \"abreviation\": \"Q.S\",\n                \"fullname\": \"Quebec solidaire\"\n            },\n            {\n                \"abreviation\": \"P.C.Q\",\n                \"fullname\": \"Parti conservateur du Quebec\"\n            },\n            {\n                \"abreviation\": \"P.I.Q\",\n                \"fullname\": \"Parti pour l'independance du Quebec\"\n            }     \n        ]\n}"
 let json=JSON.parse(content);
-/*var url='https://log2420-serve.herokuapp.com/JSON/output.json';
-jQuery.getJSON(url,fonction(data))
+
+function setup() {
+    var url = 'http://api.open-notify.org/iss-now.json';
+    loadJSON(url, gotData, 'jsonp');
+   }
+   
+function gotData (data) {
+   console.log(data.iss_position.latitude);
+   }
+/*function setup()
 {
+    loadJSON('https://log2420-serve.herokuapp.com/JSON/output.json',getData);
+}
+
+function getData(data) {
+    alert("Done");
     mydata=data;
-}*/
+  }
+
+setup();*/
 
 var fonction1=function(event){
     for(var i=0;i<cercle.length;i++)
@@ -26,11 +42,11 @@ var fonction1=function(event){
     this.style.color='black';
     for(var i=0;i<nomPartie.length;++i)
     {
-        if(index%2==0)
+        if(index%2==0 && mydata)
         {
-            document.getElementById(nomPartie[i]).innerHTML=json.PartisFederaux[i].fullname;
+            document.getElementById(nomPartie[i]).innerHTML=mydata.PartisFederaux[i].fullname;
         }
-        else
+        else if(index%2!=0 && mydata)
         {
             document.getElementById(nomPartie[i]).innerHTML=json.PartisProvinciaux[i].fullname;
         }
@@ -101,6 +117,6 @@ for(var i=0;i<cercle.length;i++)
 {
     document.getElementById(cercle[i]).addEventListener("click",fonction1);
 }
-
+var element=document.getElementById("cercle1");
 
 
